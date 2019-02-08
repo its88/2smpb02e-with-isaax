@@ -17,9 +17,9 @@ Highcharts.chart('chart', {
                     ty = res.body.temperature;
                 
                 if (ty < series.yAxis.oldMin | !series.yAxis.oldMin) {
-                    series.yAxis.update({min: py});
+                    series.yAxis.update({min: ty});
                 }
-                series.addPoint([x, py], true, true);
+                series.addPoint([x, ty], true, true);
               });
           }, 3000);
         } 
